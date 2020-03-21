@@ -8,7 +8,7 @@
 	name = "Vox Ship"
 	id = "awaysite_voxship"
 	description = "Vox ship."
-	suffixes = list("voxship/voxship.dmm")
+	suffixes = list("voxship/voxship-1.dmm")
 	cost = 0.5
 	shuttles_to_initialise = list(/datum/shuttle/autodock/overmap/vox_shuttle)
 	area_usage_test_exempted_root_areas = list(/area/voxship)
