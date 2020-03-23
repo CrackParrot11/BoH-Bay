@@ -172,5 +172,5 @@
   base_turf = /turf/simulated/open
 
 /area/ship/scrap/shuttle/outgoing
-  name = "\improper Exploration Shuttle"
+  name = "Cargo Shuttle"
   icon_state = "tcomsatcham"

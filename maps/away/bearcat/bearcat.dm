@@ -22,8 +22,31 @@
 	max_speed = 1/(10 SECONDS)
 	burn_delay = 10 SECONDS
 	initial_restricted_waypoints = list(
-		"Glowbulb" = list("nav_glowbulb")
+		"Glowbulb" = list("nav_glowbulb,")
 		)
+
+/datum/shuttle/autodock/overmap/bearcat_shuttle
+	name = "Cargo shuttle"
+	move_time = 10
+	shuttle_area = list(/area/ship/scrap/shuttle/outgoing)
+	dock_target = "bearcat_shuttle"
+	current_location = "nav_bearcat_dock"
+	landmark_transition = "nav_bearcat_transit"
+	range = 1
+	fuel_consumption = 4
+	ceiling_type = /turf/simulated/floor/shuttle_ceiling/
+	skill_needed = SKILL_NONE
+	defer_initialisation = TRUE
+
+/obj/effect/shuttle_landmark/bearcat/bearcat_shuttle
+	name = "Cargo Ship Dock"
+	landmark_tag = "nav_bearcat_dock"
+	base_area = /area/ship/scrap/dock
+	base_turf = /turf/simulated/floor/tiled/usedup
+
+/obj/effect/shuttle_landmark/transit/bearcat/bearcat_shuttle
+	name = "In transit"
+	landmark_tag = "nav_bearcat_transit"
 
 /obj/effect/overmap/visitable/ship/bearcat/New()
 	name = "[pick("FTV","ITV","IEV")] [pick("Bearcat", "Firebug", "Defiant", "Unsinkable","Horizon","Vagrant")]"
