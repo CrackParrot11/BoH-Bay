@@ -1,7 +1,7 @@
 #include "bearcat_areas.dm"
 #include "bearcat_jobs.dm"
 #include "bearcat_access.dm"
-//#include "bearcat_shuttles.dm"
+#include "bearcat_shuttles.dm"
 
 /obj/effect/submap_landmark/joinable_submap/bearcat
 	name = "FTV Bearcat"
@@ -21,32 +21,13 @@
 	vessel_mass = 60
 	max_speed = 1/(10 SECONDS)
 	burn_delay = 10 SECONDS
+	initial_generic_waypoints = list(
+		"nav_bearcat_fore",
+		"nav_bearcat_aft"
+	)
 	initial_restricted_waypoints = list(
-		"Glowbulb" = list("nav_glowbulb,")
-		)
-
-/datum/shuttle/autodock/overmap/bearcat_shuttle
-	name = "Cargo shuttle"
-	move_time = 10
-	shuttle_area = list(/area/ship/scrap/shuttle/outgoing)
-	dock_target = "bearcat_shuttle"
-	current_location = "nav_bearcat_dock"
-	landmark_transition = "nav_bearcat_transit"
-	range = 1
-	fuel_consumption = 4
-	ceiling_type = /turf/simulated/floor/shuttle_ceiling/
-	skill_needed = SKILL_NONE
-	defer_initialisation = TRUE
-
-/obj/effect/shuttle_landmark/bearcat/bearcat_shuttle
-	name = "Cargo Ship Dock"
-	landmark_tag = "nav_bearcat_dock"
-	base_area = /area/ship/scrap/dock
-	base_turf = /turf/simulated/floor/tiled/usedup
-
-/obj/effect/shuttle_landmark/transit/bearcat/bearcat_shuttle
-	name = "In transit"
-	landmark_tag = "nav_bearcat_transit"
+		"Cargo shuttle" = list("nav_bearcat_dock")
+	)
 
 /obj/effect/overmap/visitable/ship/bearcat/New()
 	name = "[pick("FTV","ITV","IEV")] [pick("Bearcat", "Firebug", "Defiant", "Unsinkable","Horizon","Vagrant")]"
@@ -62,7 +43,7 @@
 	description = "A wrecked light freighter."
 	suffixes = list("bearcat/bearcat-1.dmm", "bearcat/bearcat-2.dmm")
 	cost = 1
-	shuttles_to_initialise = list(/datum/shuttle/autodock/ferry/lift)
+	shuttles_to_initialise = list(/datum/shuttle/autodock/ferry/lift, /datum/shuttle/autodock/overmap/bearcat_shuttle)
 	area_usage_test_exempted_root_areas = list(/area/ship)
 	apc_test_exempt_areas = list(
 		/area/ship/scrap/maintenance/engine/port = NO_SCRUBBER|NO_VENT,
