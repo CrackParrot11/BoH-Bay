@@ -1453,7 +1453,8 @@
 /area/ship/scrap/crew/cryo)
 "cE" = (
 /obj/effect/wallframe_spawn/reinforced,
-/turf/space,
+/obj/machinery/door/firedoor,
+/turf/simulated/floor/shuttle/black,
 /area/ship/scrap/bearcat_shuttle)
 "cF" = (
 /obj/machinery/light/small{
@@ -2643,7 +2644,8 @@
 /area/ship/scrap/crew/medbay)
 "ey" = (
 /obj/effect/wallframe_spawn/reinforced,
-/turf/simulated/floor/shuttle/black,
+/obj/machinery/door/firedoor,
+/turf/space,
 /area/ship/scrap/bearcat_shuttle)
 "ez" = (
 /obj/effect/wallframe_spawn/reinforced,
@@ -5998,6 +6000,11 @@
 /turf/simulated/floor/shuttle/black,
 /area/ship/scrap/bearcat_shuttle)
 "kf" = (
+/obj/machinery/atmospherics/pipe/simple/visible/green{
+	icon_state = "intact";
+	dir = 6
+	},
+/obj/effect/paint/brown,
 /turf/simulated/wall/r_wall/hull,
 /area/ship/scrap/bearcat_shuttle)
 "kg" = (
@@ -6005,10 +6012,7 @@
 /turf/simulated/floor/usedup,
 /area/space)
 "kh" = (
-/obj/machinery/atmospherics/pipe/simple/visible/green{
-	icon_state = "intact";
-	dir = 6
-	},
+/obj/effect/paint/brown,
 /turf/simulated/wall/r_wall/hull,
 /area/ship/scrap/bearcat_shuttle)
 "ki" = (
@@ -6069,12 +6073,12 @@
 /turf/simulated/floor/shuttle/black,
 /area/ship/scrap/bearcat_shuttle)
 "kp" = (
-/obj/structure/window/reinforced,
 /obj/machinery/atmospherics/pipe/simple/visible/green{
 	icon_state = "intact";
-	dir = 10
+	dir = 5
 	},
-/turf/simulated/floor/shuttle/black,
+/obj/effect/paint/brown,
+/turf/simulated/wall/r_wall/hull,
 /area/ship/scrap/bearcat_shuttle)
 "kq" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -6088,8 +6092,8 @@
 /turf/simulated/floor/tiled/usedup,
 /area/ship/scrap/cargo)
 "kr" = (
-/obj/structure/fuel_port,
-/obj/effect/overmap/visitable/ship/landable/bearcat_shuttle,
+/obj/machinery/atmospherics/pipe/simple/visible/blue,
+/obj/effect/paint/brown,
 /turf/simulated/wall/r_wall/hull,
 /area/ship/scrap/bearcat_shuttle)
 "ks" = (
@@ -6172,9 +6176,14 @@
 "kA" = (
 /obj/machinery/atmospherics/pipe/simple/visible/green{
 	icon_state = "intact";
-	dir = 5
+	dir = 6
 	},
-/turf/simulated/wall/r_wall/hull,
+/obj/structure/window/reinforced,
+/obj/machinery/light{
+	icon_state = "tube1";
+	dir = 8
+	},
+/turf/simulated/floor/shuttle/black,
 /area/ship/scrap/bearcat_shuttle)
 "kB" = (
 /obj/machinery/atmospherics/portables_connector{
@@ -6196,22 +6205,33 @@
 /obj/machinery/portable_atmospherics/canister/hydrogen,
 /turf/simulated/floor/shuttle/black,
 /area/ship/scrap/bearcat_shuttle)
+"kD" = (
+/obj/structure/window/reinforced,
+/obj/machinery/atmospherics/pipe/simple/visible/green{
+	icon_state = "intact";
+	dir = 10
+	},
+/obj/machinery/light{
+	dir = 4;
+	icon_state = "tube1"
+	},
+/turf/simulated/floor/shuttle/black,
+/area/ship/scrap/bearcat_shuttle)
 "kE" = (
-/obj/machinery/atmospherics/pipe/simple/visible/blue,
+/obj/structure/fuel_port,
+/obj/effect/overmap/visitable/ship/landable/bearcat_shuttle,
+/obj/effect/paint/brown,
 /turf/simulated/wall/r_wall/hull,
 /area/ship/scrap/bearcat_shuttle)
 "kF" = (
-/obj/machinery/atmospherics/pipe/simple/visible/green{
-	icon_state = "intact";
-	dir = 6
-	},
-/obj/structure/window/reinforced,
-/turf/simulated/floor/shuttle/black,
-/area/ship/scrap/bearcat_shuttle)
-"kG" = (
-/obj/machinery/atmospherics/unary/outlet_injector{
-	icon_state = "map_injector";
-	dir = 1
+/obj/machinery/atmospherics/unary/vent_pump/high_volume{
+	dir = 1;
+	external_pressure_bound = 140;
+	external_pressure_bound_default = 140;
+	icon_state = "map_vent_out";
+	pressure_checks = 1;
+	pressure_checks_default = 1;
+	use_power = 1
 	},
 /turf/simulated/floor/shuttle/black,
 /area/ship/scrap/bearcat_shuttle)
@@ -11749,13 +11769,13 @@ kR
 kR
 kR
 kR
-ey
-ey
-kh
-kA
-kh
-kE
-kG
+cE
+cE
+kf
+kp
+kf
+kr
+kF
 kR
 kR
 kR
@@ -11871,12 +11891,12 @@ kR
 kR
 kR
 kR
-ey
+cE
 hQ
 kl
 kB
 kC
-kF
+kA
 kH
 kR
 kR
@@ -11993,7 +12013,7 @@ kR
 kR
 kR
 kR
-ey
+cE
 kc
 kz
 dI
@@ -12115,7 +12135,7 @@ kR
 kR
 kR
 kR
-ey
+cE
 kd
 ki
 kk
@@ -12237,12 +12257,12 @@ kR
 kR
 kR
 kR
-ey
+cE
 ke
 ky
 dJ
 kj
-kp
+kD
 ks
 kR
 kR
@@ -12359,12 +12379,12 @@ kR
 kR
 kR
 kR
-cE
-cE
-kf
+ey
+ey
+kh
 kn
-kf
-kr
+kh
+kE
 dq
 kR
 kR
