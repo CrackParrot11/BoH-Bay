@@ -47,6 +47,7 @@ Civilian
 		/datum/mil_rank/civ/civ,
 		/datum/mil_rank/civ/contractor
 	)
+	max_pow_cat = 0
 
 /datum/job/merchant
 	title = "Merchant"
@@ -56,7 +57,6 @@ Civilian
 	spawn_positions = 2
 	availablity_chance = 30
 	supervisors = "the invisible hand of the market"
-	ideal_character_age = 30
 	minimal_player_age = 0
 	create_record = 0
 	outfit_type = /decl/hierarchy/outfit/job/torch/merchant
