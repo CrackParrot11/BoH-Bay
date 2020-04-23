@@ -7620,6 +7620,7 @@
 /obj/machinery/robotics_fabricator,
 /turf/simulated/floor/plating/vox,
 /area/voxship/med)
+
 "Vb" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	maximum_pressure = 1e+006
@@ -7627,6 +7628,8 @@
 /obj/structure/window/alien/full,
 /turf/simulated/floor/reinforced/airless,
 /area/voxship/engineering)
+
+
 
 (1,1,1) = {"
 ae
