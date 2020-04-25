@@ -19,7 +19,7 @@
 	id = "awaysite_unishi"
 	description = "CTI research ship.."
 	suffixes = list("unishi/unishi-1.dmm", "unishi/unishi-2.dmm", "unishi/unishi-3.dmm")
-	shuttles_to_initialise = list(/datum/shuttle/autodock/overmap/New_Horizons)
+	shuttles_to_initialise = list(/datum/shuttle/autodock/overmap/New_Horizons, /datum/shuttle/autodock/overmap/New_Horizons_shuttle)
 	cost = 2
 	area_usage_test_exempted_root_areas = list(/area/unishi, /area/ship)
 

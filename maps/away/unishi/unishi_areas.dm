@@ -69,6 +69,18 @@
 	name = "\improper Supermatter Research Area"
 	icon_state = "smresearch"
 
+/area/unishi/dock
+	name = "unishi dock"
+	icon_state = "hydro"
+
 /area/ship/New_Horizons
 	name = "New Horizons"
+	icon_state = "shuttle3"
+
+/area/ship/New_Horizons/dock
+	name = "New Horizons dock"
+	icon_state = "living"
+
+/area/ship/New_Horizons_shuttle
+	name ="New Horizons shuttle"
 	icon_state = "shuttle3"
